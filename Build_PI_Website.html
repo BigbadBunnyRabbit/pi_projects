@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body><span style="font-family: Times New Roman;"><strong>PI Web Server </strong><br>
+    </span>
+    <p><em><strong><span style="font-family: Times New Roman;">If this is the
+            first time the Raspberry Pi has been setup do the following</span></strong></em><span
+        style="font-family: Times New Roman;"><br>
+      </span></p>
+    <p><span style="font-family: Times New Roman;">sudo raspi-config (to change
+        password)</span><span style="font-family: Times New Roman;"><br>
+      </span></p>
+    <p><span style="font-family: Times New Roman;">sudo apt-get update (get
+        latest updates) </span><br>
+      <span style="font-family: Times New Roman;"></span></p>
+    <p><span style="font-family: Times New Roman;">sudo apt-get upgrade (apply
+        lateset updates) <br>
+      </span></p>
+    <span style="font-family: Times New Roman;"><em><strong>If Pi already setup
+          carry out the following to install a webserver </strong></em><br>
+    </span>
+    <p><span style="font-family: Times New Roman;">sudo apt-get install apache2
+        php</span></p>
+    <p><span style="font-family: Times New Roman;"><em><strong>to test PI web
+            server</strong></em></span></p>
+    <p><span style="font-family: Times New Roman;"><em><strong></strong></em>
+        http://IPaddress_of_PI</span><br>
+      <span style="font-family: Times New Roman;"></span></p>
+    <span style="font-family: Times New Roman;"><ip address="" of="" pi="">create
+        folder called html in the /home/pi folder</ip><br>
+    </span>
+    <p><span style="font-family: Times New Roman;"><ip address="" of="" pi="">link
+          to web source by running :-
+          ln -s /var/www/html /home/pi/html</ip></span></p>
+    <p><span style="font-family: Times New Roman;"><ip address="" of="" pi=""></ip></span><span
+        style="font-family: Times New Roman;"><strong><ip address="" of="" pi="">ensure
+            pi has rights to the folder </ip></strong></span><br>
+      <span style="font-family: Times New Roman;"></span><span style="font-family: Times New Roman;"><ip
+          address="" of="" pi="">sudo chown pi /var/www/html</ip></span></p>
+    <p><span style="font-family: Times New Roman;"><ip address="" of="" pi="">sudo
+          chgrp pi /var/www/html </ip></span></p>
+    <span style="font-family: Times New Roman;"><ip address="" of="" pi=""><strong>to
+          stop and start web server</strong> </ip><br>
+      <ip address="" of="" pi=""></ip><ip address="" of="" pi="">/etc/init.d/apache2
+        stop </ip><br>
+      <ip address="" of="" pi=""></ip><ip address="" of="" pi="">/etc/init.d/apache2
+        start
+      </ip></span>
+  </body>
+</html>

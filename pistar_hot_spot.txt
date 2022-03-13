@@ -1,0 +1,16 @@
+add dmr id and plug in, wifi code
+pi-star.uk = os >>
+go to pi-star wifi builder - enter wifi code and download config file
+burn to sd card for os
+drag config file for wifi to root of sd card with os installed
+power up, 1st time boot up could be 5 or 6 minutes
+no screen by default
+go to pi-star.local to connect
+click apply on top it will reboot
+after reboot select pi-star, menu etc select turn on screen
+it will reboot again
+enter callsign, location etc
+it will reboot again
+
+get pi-star id from
+https://register.ham-digital.org

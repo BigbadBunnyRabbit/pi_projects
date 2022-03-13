@@ -1,0 +1,19 @@
+turn usb stick into encrypted vault
+
+use veracrypt
+www.snipca.com/33664
+
+run veracrypt - select create volume
+choose encrypt a nonsystem partition or drive
+select standard veracrypt volume 
+select device to use and partition 
+accept next 3 defaults
+set passwords
+move mouse around randomly to increase complexity of encryption
+moount vault inside veracrypt
+when plugged in windows may sugest to fotmat it so ignore warning
+enter password and use like a normal drive
+to remove - dismount drive in veracrypt
+
+an improvent is to create a file -  encrypt that then mount tht and copy files into it
+ 
