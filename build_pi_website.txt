@@ -1,0 +1,27 @@
+PI Web Server
+If this is the first time the Raspberry Pi has been setup do the following
+
+sudo raspi-config (to change password)
+
+sudo apt-get update (get latest updates)
+
+sudo apt-get upgrade (apply lateset updates)
+
+If Pi already setup carry out the following to install a webserver
+sudo apt-get install apache2 php
+
+to test PI web server
+
+http://IPaddress_of_PI
+
+create folder called html in the /home/pi folder
+link to web source by running :- ln -s /var/www/html /home/pi/html
+
+ensure pi has rights to the folder
+sudo chown pi /var/www/html
+
+sudo chgrp pi /var/www/html
+
+to stop and start web server
+/etc/init.d/apache2 stop
+/etc/init.d/apache2 start

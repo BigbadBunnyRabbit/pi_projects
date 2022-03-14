@@ -1,0 +1,13 @@
+Teraform on Pi
+
+This is for building changing and versioning infrastructure
+
+Snaps is apps packaged with all dependencies to run on linux distro from a single build so roll also roll back gracefully - install future supported apps from snap store
+
+Install and enable snapd
+
+sudo apt update
+sudo apt install snapd
+sudo reboot
+sudo snap install core
+sudo snap install teraform --candidate
