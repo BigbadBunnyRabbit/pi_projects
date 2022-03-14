@@ -62,3 +62,48 @@ git show <commit hash> shows all details of that commit
 git diff shows file changes / added test etc ie the difference between what's committed and what hasnt been yet
 files deleted can be restored with 'git restore filename'
 
+if you want to change the message of the last commit
+git commit --amend -m "more meaningful text"
+git log will now show the updated message
+
+push
+----
+git push takes a copy of the project to the repository on the remote hosting srver
+
+create an account on github.com
+create a repo , give it a name and make it either public or private
+you can initialise the repo with a read me file OR if  importing a repo from the local machine then create  an empty repo
+
+to push files from local machine to github
+git remote add origin https://github.com/bigbadbunnyrabbit/pi_projects.git
+git branch -M main
+git push -u origin main
+n.b. the master branch is now named main
+
+During the push for the first time you will be prompted to either add ssh keys or use he oauth application via the browser for security
+
+pull
+----
+copies github repo to local machine
+eg add read.me file to github and commit to main branch
+git pull will copy that new file back to local repo
+ 
+branches
+--------
+so far all commits have been in the same branch. the default branch is master lately called main
+a branch can represent a seperate line of development
+git branch shows what branch you are on either locally or remote
+eg
+git branch (returns local branch --- main)
+git branch -r (returns remote github branch --- origin/main)
+git branch -a (shows all branches)
+
+a new branch is a copy of a branch you can edit eg
+git branch feature_a (create a new branch called feature_a with all the files frmo main to this point)
+git checkout feature_a (switches to this branch)
+git checkout main or git checkout - (switches to main branch)
+when you are on a sub branch you add and commit files to it as normal
+git push --set-upstream origin feature_a (pushes branch to github so the branch is visible there)
+git branch -d branch 'name' (deletes branch 'name')
+
+
