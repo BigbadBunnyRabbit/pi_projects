@@ -1,0 +1,10 @@
+Ansible on Pi
+This is an agentless configuration management system
+so only installed on controller which is normally a desktop
+
+To install on Pi
+sudo apt update
+sudo apt install -y ansible sshpass
+
+To check Version
+ansible --version
