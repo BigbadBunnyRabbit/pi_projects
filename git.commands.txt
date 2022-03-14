@@ -1,0 +1,64 @@
+GIT
+===
+Git is version control software that alows multiple people to work on the same project
+Github is the hosting software that hosts the project centrally across the network. There are other hosting solutions such as GitLab, GitBucket and many others
+
+Git has a working directory that holds the files locally
+These are held in a staging area
+These are committed and include a commit history
+you may have many commits and each commit acts as a save point
+All the above is on the local machine, to store on the remote hosting server you need to use Git Push
+
+Install
+-------
+when installing on windows install GitBash to keep the commands consistent across platforms
+once installed open gitbash and confirm installed via
+git --version
+git --help
+
+Setup
+-----
+to configure user info
+git config --global user.name "your name"
+git config --global user.email "you@mail.com"
+git config --global color.ui auto
+
+git config -l (shows current configuration)
+
+Initialise
+----------
+A repository is a collection of various versions of a project
+create a folder for a project eg 
+mkdir pi_projects
+cd pi_projects
+git init . (initialises current directory)
+you can now add files via git commands, git init is the first thing to do for a new project
+it creates a .git folder, if you remove it via rm -rf .git it removes the repository so git commands no longer work until you run git init again
+
+add files
+---------
+create a file via touch example.txt
+git status (this shows changes made etc as wella s untracked files ie files not committed)
+
+git add example.txt
+now git status shows one change to commit
+
+if you run 'git rm --cached example.txt' this removes he file from being staged
+git status now shows that the change has now been cancelled
+
+you can either git add filename or git add . to all files in the directory including all in subfolders
+any files added are now staged
+
+git add -A (this adds all files in the repository no matter where you are ie parent folder and downwards) 
+
+commit
+------
+git commit -m "meaningful message"
+a git status now shows no more commits waiting because files are no longer in the staging area
+
+git log (this shows the commit hash, author, date, commit message)
+git show <commit hash> shows all details of that commit
+
+git diff shows file changes / added test etc ie the difference between what's committed and what hasnt been yet
+files deleted can be restored with 'git restore filename'
+
