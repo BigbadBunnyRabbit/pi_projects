@@ -106,4 +106,30 @@ when you are on a sub branch you add and commit files to it as normal
 git push --set-upstream origin feature_a (pushes branch to github so the branch is visible there)
 git branch -d branch 'name' (deletes branch 'name')
 
+pull requests
+-------------
+a pull request allows someone to check your branch before merging, most employees usually dont work in the main branch.
 
+git merge feature_a (this merges feature_a branch but without the safety checks via a pull request)
+the pull request normally has multiple approvers, once approved it will merge with main branch
+git pull will update local copy of repository
+once merged the local feature_a branch can be deleted
+git branch -d feature_a
+git branch -a (this now only shows main branch)
+
+workflow
+--------
+if working on a new feature
+pull latest version of master to local
+create branch
+commit changes to branch
+rebaseline master in case its changed
+(stash any commits and add back in)
+resolve any conflicts
+push to remote
+create pull request
+merge if approved
+
+site
+----
+https://github.com/bigbadbunnyrabbit/pi_projects
