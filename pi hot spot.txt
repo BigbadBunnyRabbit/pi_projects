@@ -1,0 +1,78 @@
+Hot Spot
+========
+talkgroups are like conversations going on in different rooms
+eg talkgroup 310 is All USA
+you can connect to a talkgroup in hungary and will connect to the repeater in hungary connected to that talkgroup and any hotspots connected to that talkgroup
+
+to connect to the hotspot
+https://pi-star.local
+default admin		pi-star
+default password	raspberry
+ 
+any section has its own save changes button, use the admin dashboard to update 
+expert menu - backup - save to desktop this can be restored via the dashboard if needed
+change remote password
+color code should be 1
+no gps
+select DMR mode only
+modem should be stm32-dvm/mmdvm raspberry pi hat (gpio)
+all firewall settings should be private for uk
+BER - bit error rate  - modify and test with parrot, located at expert/mmdvm host
+	0.1 or 0.2% BER is acceptable
+if dashboard says not linked it is because the radio has to tell it to link to a talkgroup
+
+aprs
+----
+host enable - set to enabled - location will be public
+aprs host - select automatically rotating T2 Aprs host ie one with multiple hosts in the backend
+eg euro.aprs2.net
+
+Anytone 868
+===========
+digital monitor - sets promiscious mode and needs to be enabled frmo main menu
+select double slot, color code = any, digi moni id = any, slot hold = on
+to enable digital - settings - channel set - channel type - digital
+menu - scan -on - select (search) - when it stops on channel and the green light goes out press the #key to save the channel then select zone
+time slot should be 2 on the radio
+
+to download firware etc
+-----------------------
+go to https://amateurradio.digital
+	1.digital contacts wizard
+	2.select anytone 868 for the radio
+	3.download the custom contacts file
+Also download the latest firmware and unzip it.
+install the driver if needed and install the anytone software
+also install the updating software for the icons etc
+
+install firmware
+----------------
+run the QX software - 
+	1. make sure duplex is on (press tx and top red button while turning the radio on)
+	2. select com port
+	3. open firmware file
+	4. write - ok to update firmware
+turn back on holding the tx and bottom side button by the tx, hit the green (confirm) button
+screen should say update mode
+	1. open file on pc, browse to icons file, make sure dplex is ticked
+	2. write
+when finished close the software, turn off the radio then turn it back on again
+set date and time if needed, load the code plug :-
+run 868cps software
+set com port
+set the following settings
+
+-digital	radio id list	enter callsign and dmr id
+-talkgroups	double click	number 		= 310
+				name		= TAC310
+				call alert	= none
+				type		= group call
+-channel	choose ch20	enter hot spot frequency for rx/tx, name is hotspot.tac310
+				set as digital, low power, tx permit is always
+				check contact is same as talkgroup, color code is 1, slot is 1(simplex)
+				RxGroupList is none
+now add to a zone and add tac310 channel to that zone
+the dmr db takes about 15 mins to update
+go to tools import - digital contact list - browse to file - import to cps
+- write to radio
+select digital contacts list only when updating contacts otherwise deselt that option 	
