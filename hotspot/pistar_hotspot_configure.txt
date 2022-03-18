@@ -35,7 +35,7 @@ to enable digital - settings - channel set - channel type - digital
 menu - scan -on - select (search) - when it stops on channel and the green light goes out press the #key to save the channel then select zone
 time slot should be 2 on the radio
 
-to download firware etc
+to download firmware etc
 -----------------------
 go to https://amateurradio.digital
 	1.digital contacts wizard
@@ -60,6 +60,39 @@ when finished close the software, turn off the radio then turn it back on again
 set date and time if needed, load the code plug :-
 run 868cps software
 set com port
+
+create codeplug
+---------------
+repeaters may need multiple channels and each may need a unique name
+receive group list - this is a list of groups that contain talkgroups in required order, this is for monitoring via digital monitor and is like scanning (although there is also a scan list)
+zone - every channel needs to be in a zone therefore you have multiple channels per zone, you can have a repeater zone etc.
+talkgroup disconnect - key up on channel, when finished select disconnect TG and key up, move to new TG and key up
+
+Brandmeister Talkgroups
+-----------------------
+1	local
+91	worldwide
+92	europe
+93	usa
+95	australia/new zealand
+98	radio test
+235	uk call - qsy to 2351 or 2352
+262	germany
+272	ireland
+910	german
+913	english
+2350	uk
+2351	chat 1
+2352	chat 2
+2353	chat 3
+2354	ireland
+2357	isle of mann
+23526	hubnet uk
+23531	raynet uk
+23520	north west uk
+
+
+
 set the following settings
 
 -digital	radio id list	enter callsign and dmr id
